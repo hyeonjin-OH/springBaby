@@ -1,7 +1,16 @@
 package inflearn.spring.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) //DB가 자동생성하는 경우는 identity
     private Long id;
+
     private String name;
 
     public Long getId() {
